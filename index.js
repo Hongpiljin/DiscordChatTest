@@ -1,11 +1,11 @@
 import WordChainGame from './wordChainGame.js';
 import NunchiGame from './nunchiGame.js';
 import ProbabilityTestGame from './probabilityTestBot.js';  // 문제 없이 import
-
-import dotenv from 'dotenv';
+import dotenv, { config } from 'dotenv';
 import { Client, GatewayIntentBits, SlashCommandBuilder } from 'discord.js';
-
 dotenv.config();  // dotenv를 불러와서 환경 변수 로딩
+console.log(config);
+
 
 const client = new Client({
   intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent]
@@ -336,3 +336,6 @@ client.on('messageCreate', async (message) => {
 
 // 환경변수에서 봇 토큰을 로드하여 로그인
 client.login(process.env.DISCORD_TOKEN);
+console.log('DISCORD_TOKEN:', process.env.DISCORD_TOKEN);
+console.log('Type:', typeof process.env.DISCORD_TOKEN);
+console.log('Length:', process.env.DISCORD_TOKEN.length);

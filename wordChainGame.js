@@ -1,5 +1,7 @@
-require('dotenv').config();
-class WordChainGame {
+import dotenv, { config } from 'dotenv';
+dotenv.config();
+console.log(config);
+export default class WordChainGame {
     constructor(client) {
         this.rooms = {};
         this.client = client;
@@ -198,5 +200,3 @@ class WordChainGame {
         }
     }
 }
-
-module.exports = WordChainGame;

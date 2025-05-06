@@ -1,4 +1,4 @@
-class NunchiGame {
+export default class NunchiGame {
     constructor(client) {
         this.rooms = {};
         this.client = client;
@@ -155,4 +155,3 @@ class NunchiGame {
 
 }
 
-module.exports = NunchiGame;
