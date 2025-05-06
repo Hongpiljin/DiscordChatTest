@@ -1,3 +1,4 @@
+require('dotenv').config();
 class WordChainGame {
     constructor(client) {
         this.rooms = {};
@@ -173,7 +174,7 @@ class WordChainGame {
     }
 
     async isValidKoreanWord(word) {
-        const apiKey = "3DBDC94FAAE9284C9593688842A7A761";
+        const apiKey = process.env.API_KEY;  // 발급받은 키
         const encodedWord = encodeURIComponent(word);
         const apiUrl = `https://opendict.korean.go.kr/api/search?key=${apiKey}&target_type=search&req_type=xml&part=word&q=${encodedWord}`;
 
