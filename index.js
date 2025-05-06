@@ -336,6 +336,3 @@ client.on('messageCreate', async (message) => {
 
 // 환경변수에서 봇 토큰을 로드하여 로그인
 client.login(process.env.DISCORD_TOKEN);
-console.log('DISCORD_TOKEN:', process.env.DISCORD_TOKEN);
-console.log('Type:', typeof process.env.DISCORD_TOKEN);
-console.log('Length:', process.env.DISCORD_TOKEN.length);
