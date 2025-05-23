@@ -4,15 +4,14 @@ const { EmbedBuilder } = pkg;
 export default class ProbabilityTestGame {
   constructor(client) {
     this.client = client;
-    this.itemProbabilities = {
-      "고급": { probability: 0.9 },
-      "고급★": { probability: 0.85 },
-      "레어★": { probability: 0.8 },
-      "레어★★": { probability: 0.8 },
-      "레어★★★": { probability: 0.5 },
-      "엘리트 ★★★★": { probability: 0.4 },
-      "에픽★★★★★": { probability: 0.1 },
-    };
+   this.itemProbabilities = {
+  "고급": { probability: 0.9 },             // 성공 90%
+  "고급★": { probability: 0.85 },           // 성공 85%
+  "레어★★": { probability: 0.8 },           // 성공 80%
+  "레어★★★": { probability: 0.5 },          // 성공 50%
+  "엘리트 ★★★★": { probability: 0.4 },     // 성공 40%
+  "에픽★★★★★": { probability: 0.1 },       // 성공 10%
+};
     this.maxTrials = 10;
     this.resetState();
   }
